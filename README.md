@@ -87,7 +87,7 @@ make serveur        # démarre ServeurEnchere (SQLite crée/maj au besoin)
 make commissaire    # lance un commissaire
 make utilisateur    # lance un utilisateur
 make app            # lance l'interface graphique
-
+```
 ---
 
 > *« Vendez, enchérissez, gagnez… le tout en Java !»*
