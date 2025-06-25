@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VendreController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="690.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/home/aissa/Bureau/code_projet/jhalAuction-master/src/doc/JHAL_Auction.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="messageLabel" prefHeight="142.0" prefWidth="600.0" />
+      <AnchorPane layoutX="636.0" layoutY="70.0" prefHeight="461.0" prefWidth="231.0">
+         <children>
+            <Text layoutX="31.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une offre" textAlignment="CENTER" wrappingWidth="171.0000010728836">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Button layoutX="52.0" layoutY="305.0" mnemonicParsing="false" onAction="#ajouterProduit" text="Ajouter une offre" />
+            <TextField fx:id="descriptionField" layoutX="31.0" layoutY="158.0" promptText="Description" />
+            <TextField fx:id="prixDepartField" layoutX="31.0" layoutY="193.0" promptText="Prix initiale" />
+            <Button layoutX="56.0" layoutY="344.0" mnemonicParsing="false" onAction="#toMenu" text="Retour au Menu" />
+            <TextField fx:id="dureeEnchereField" layoutX="32.0" layoutY="262.0" promptText="DuréeEnchere (seconde)" />
+            <TextField fx:id="emailVendeurField" layoutX="30.0" layoutY="75.0" promptText="email Vendeur" />
+            <TextField fx:id="carIDField" layoutX="32.0" layoutY="118.0" promptText="carID" />
+            <TextField fx:id="incrementMinField" layoutX="32.0" layoutY="229.0" promptText="IncrementMin" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
