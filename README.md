@@ -40,13 +40,13 @@ Vous trouverez ci-dessous un aide-mémoire rapide :
 | `Utilisateur.java`| Client (inscription, connexion, enchères) |
 | `Terminale.java`  | Petit shell de test permettant d’envoyer des messages bruts |
 | `DataBase.java`   | Couche **JDBC / SQLite** : création & requêtes (`users`, `cars`, `bids`, `history`) |
-| `fctUtile.java`   | Méthodes utilitaires (hash SHA-256, conversions, timers, etc.) |
+| `fctUtile.java`   | Méthodes utilitaires |
 | `menuCo.fxml` + `menuCoController.java` | **Menu principal** JavaFX après connexion |
 | `choix_Client.fxml` + `choix_ClientController.java` | Sélection du rôle (Acheteur / Commissaire) |
 | `inscription.fxml` + `inscriptionController.java` | Formulaire de **création de compte** |
 | `OffresDispo.fxml` + `OffresDispoController.java` | Catalogue en temps réel (ListView + enchères) |
 | `Vendre.fxml` + `VendreController.java` | Formulaire d’**ajout de voiture** (commissaire) |
-| `Reclamation.fxml` + `ReclamationController.java` | Fenêtre de réclamation (comparatif enchères) |
+| `Reclamation.fxml` + `ReclamationController.java` | Fenêtre de réclamation |
 | `PrintCallback.java` / `MessageCallback.java` | Helpers pour l’affichage console & GUI |
 
 
@@ -56,12 +56,12 @@ Vous trouverez ci-dessous un aide-mémoire rapide :
 
 ### Sécurité
 * SHA-256 pour les mots de passe  
-* Liste blanche des clients connectés → seules les IP reconnues peuvent enchérir.
+* Liste des clients connectés → seules les IP reconnues peuvent enchérir.
 
 ### Réseau
 * Protocole **UDP**.  
 * Chaque requête = objet `Message` sérialisé (polymorphisme → `traitementServeur`).  
-* Diffusion automatique sur **multicast** pour mettre à jour tous les GUI.
+* Diffusion automatique pour mettre à jour tous les GUI.
 
 ### Base de données
 | Table       | Champs essentiels | Description |
@@ -69,7 +69,7 @@ Vous trouverez ci-dessous un aide-mémoire rapide :
 | `users`     | `id`, `username`, `password` | Authentification |
 | `cars`      | `car_id`, `description`, `starting_price`, `current_price`, `status` | Lots à vendre |
 | `bids`      | `car_id`, `user_mail`, `amount`, `bid_date` | Toutes les offres |
-| `history`   | `user_mail`, `car_id`, `amount`, `bid_time` | Traçabilité Many-to-Many |
+| `history`   | `user_mail`, `car_id`, `amount`, `bid_time` | Traçabilité |
 
 ### Interface JavaFX
 * **Commissaire** : Liste des voitures, formulaire d’ajout, bouton « Démarrer enchère ».  
